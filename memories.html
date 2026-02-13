@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Memories 🤍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fade-in">
+  <div class="hearts"></div>
+
+  <div class="card valentine">
+<h1>Meri Pyari Cute Si Jaann 🤍</h1>
+
+
+    <p>Apky Ky Sath Mera Har Time Buht Acha Huta Hai Kyu Ky Ap Mere Pass Huti Hu.</p>
+    <p>Mujhe Ap Ky Sath Ka Har Moment Yaad Hai Kyu Ky Apky Sath Mai Khush Huta HU...</p>
+    <p>Apky Sath Mai Aik Bacha Ban Jata Hu Kyu Ky Ap Meri Comfort Zone Hain...Mai Buht Comfortable Huta Hu Apky Sath.</p>
+    <p><b>I Love You Soo Much Mera Golo Molo Sa Baby</b></p>
+
+ <p style="margin-top:25px;">Mujhe Ye Din Hamesha Yaad Rahay Kyu Ky Mai Apni Jaan Ky Pass Tha</p>
+    <p><b>I Love You Soo Much Meri Pyari Cute Si Farwaa Jaan</b></p>
+
+    <div class="gallery">
+      <img src="images/m1.jpg" alt="memory 1">
+      <img src="images/m2.jpg" alt="memory 2">
+      <img src="images/m3.jpg" alt="memory 3">
+      <img src="images/m4.jpg" alt="memory 4">
+      <img src="images/m5.jpg" alt="memory 5">
+      <img src="images/m6.jpg" alt="memory 6">
+    </div>
+
+    <p class="highlight">
+     Har Picture Aik Pyari Or Cute Moment Ki Trf Khenchti Hai   </p>
+
+    <a href="favourite.html" class="btn cute">
+      <b>Sab Se Cute 🌸</b>
+    </a>
+
+    <a href="page2.html" class="btn small">
+       Back
+    </a>
+
+  </div>
+<script>
+  const heartsContainer = document.querySelector('.hearts');
+
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '💞';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (6 + Math.random() * 4) + 's';
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+  }
+
+  setInterval(createHeart, 1200);
+</script>
+
+
+</body>
+</html>

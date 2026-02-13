@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>One Question 🤍</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .choices {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .no-btn {
+      background: #444;
+    }
+
+    .tease {
+      margin-top: 20px;
+      font-style: italic;
+      opacity: 0.9;
+      min-height: 24px;
+    }
+  </style>
+</head>
+
+<body class="fade-in">
+<div class="hearts"></div>
+
+
+  <div class="card valentine">
+
+    <h1>Zaroori Cheez🤍</h1>
+
+    <p class="soft">
+     Kyu Ke Ye Hamara Pahla Valentine Hai    </p>
+
+<p class="soft">
+Mai Kuch Zyada Special Bana Saka Sorrrryyyyy...</p>
+
+    <p class="soft">
+      Toh Meri Pyari Farwa Jaann     </p>
+
+    <p class="highlight">
+      Kia Ap Meri Valentine Banain Gi Kia?! 🌸
+    </p>
+
+    <div class="choices">
+      <button class="btn cute" onclick="yesClicked()">
+       Haa 🤍
+      </button>
+
+      <button class="btn small no-btn" onclick="noClicked()">
+        Chup 🙄
+      </button>
+    </div>
+
+    <p id="teaseText" class="tease"></p>
+
+    <a href="favorite.html" class="btn small">
+       Back
+    </a>
+
+  </div>
+
+  <script>
+    const teasingLines = [
+      "Abeee Ye Kiaa",
+      "Nahi Nawwwww ",
+      "Lagta Hai Naraz Hai Mera Baby",
+      "Please Naawwwwww",
+      "Hehe Chair Rahi Hai Meri Jaann💗"
+    ];
+
+    let count = 0;
+
+    function noClicked() {
+      document.getElementById("teaseText").innerText =
+        teasingLines[count % teasingLines.length];
+      count++;
+    }
+
+    function yesClicked() {
+      window.location.href = "secret.html";
+    }
+  </script>
+<script>
+  const heartsContainer = document.querySelector('.hearts');
+
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '💓';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (6 + Math.random() * 4) + 's';
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+  }
+
+  setInterval(createHeart, 1200);
+</script>
+
+
+</body>
+</html>

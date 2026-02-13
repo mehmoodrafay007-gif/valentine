@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Us 🤍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fade-in">
+  <div class="hearts"></div>
+
+  <div class="card valentine">
+
+    <h1><b>Jaaanuuuu 🤍</b></h1>
+
+    <p class="soft">
+      Ye Hamare Cute Cute Moments...    </p>
+
+    <p class="soft">
+      Mtlb Ham Jab Jab Milain GY Beshak Wo 5 Min He Kyu Na Hu Mujhe Buht Khushi Milti Hai. </p>
+
+    <p class="soft">
+     Ap Mera Sab Kuch Hu MEri Khushi Hu.    </p>
+
+     <p class="soft">
+      I Love Youu Soo Soo Much Mera Pyara Babyyy </p>
+
+    <div class="gallery">
+      <img src="images/p1.jpg" alt="us 1">
+      <img src="images/p2.jpg" alt="us 2">
+      <img src="images/p3.jpg" alt="us 3">
+    </div>
+
+    <p class="highlight">
+      Hehe Inko Dekh Kr Mujhe Buht Khushi Milti Hai    </p>
+
+    <a href="memories.html" class="btn cute">
+     <b> Hamari Yadain</b> 🌸
+    </a>
+
+    <a href="index.html" class="btn small">
+       Back
+    </a>
+
+  </div>
+<script>
+  const heartsContainer = document.querySelector('.hearts');
+
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '💗';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (6 + Math.random() * 4) + 's';
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+  }
+
+  setInterval(createHeart, 1200);
+</script>
+
+
+</body>
+</html>

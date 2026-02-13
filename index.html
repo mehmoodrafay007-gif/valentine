@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Valentine 🤍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+ 
+
+
+<body class="fade-in">
+   <div class="hearts"></div>
+
+
+  <!-- soft background music -->
+  <audio id="bgMusic" src="music/love.mp3" autoplay loop></audio>
+
+  <div class="card valentine">
+
+    <h1>Meri Pyari Jaann 🤍</h1>
+
+    <p class="soft">
+      Ye Apky Liye Valentine Ka Aik Chota Sa Surprise.
+    </p>
+
+    <p class="soft">
+     Ap Mere Liye Buht Zyada Important Hu.
+    </p>
+
+    <p class="soft">
+      Ap Mera Cute Sa Golo Molo Sa Babyy Hu.    </p>
+
+    <p class="highlight">
+      Happy Valentine’s, Meri Pyari Jaann 🌸
+    </p>
+
+    <a href="page2.html" class="btn cute">
+      <b>Button Dabao 🤍</b>
+    </a>
+
+  </div>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    document.body.addEventListener("click", () => {
+      if (music.paused) music.play();
+    });
+  </script>
+ <script>
+  const heartsContainer = document.querySelector('.hearts');
+
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '💞';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (6 + Math.random() * 4) + 's';
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+  }
+
+  setInterval(createHeart, 1200);
+</script>
+
+</body>
+</html>
